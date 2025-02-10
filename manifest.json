@@ -1,0 +1,10 @@
+{
+  "name": "Color Picker",
+  "description": "Pick a Color you desirer with this tool",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  }
+}

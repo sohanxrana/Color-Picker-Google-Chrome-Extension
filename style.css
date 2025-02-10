@@ -1,0 +1,203 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", serif;
+}
+
+.popup {
+  width: 450px;
+  background-color: #fff;
+}
+
+.popup :where(.picker, header, .all-colors) {
+  display: flex;
+  align-items: center;
+}
+
+.popup .picker {
+  padding: 30px 0;
+  background-color: #ffeeee;
+  justify-content: center;
+}
+
+.picker #color-picker {
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgb(235, 70, 20);
+  transition: 0.3s ease;
+}
+
+#color-picker:hover {
+  background-color: #f05353;
+}
+
+.picked-colors {
+  margin: 10px 15px;
+}
+
+.picked-colors header {
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1rem;
+}
+
+.clear-all {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #f05353;
+}
+
+.clear-all:hover {
+  color: rgb(235, 70, 20);
+}
+
+.picked-colors.hide {
+  display: none;
+}
+
+.picked-colors .all-colors {
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.all-colors .color {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: calc(100% / 4);
+}
+
+.all-colors .rect {
+  height: 21px;
+  width: 21px;
+  display: block;
+  margin-right: 8px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.all-colors .color span {
+  font-size: 0.96rem;
+  font-weight: 500;
+  text-transform: uppercase;
+} */
+
+/* Reset some basic defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Popup Container */
+.popup {
+  background: #fff;
+  width: 320px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Color Picker Button */
+.picker {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#color-picker {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#color-picker:hover {
+  background: linear-gradient(45deg, #5b0ebf, #1e66e0);
+}
+
+/* Picked Colors Section */
+.picked-colors header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.picked-colors .title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.clear-all {
+  font-size: 14px;
+  color: #2575fc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.clear-all:hover {
+  color: #1e66e0;
+}
+
+/* Colors List */
+.all-colors {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Individual Color Item */
+.color {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.color:last-child {
+  border-bottom: none;
+}
+
+/* Color Swatch */
+.rect {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 1px solid #000000;
+}
+
+/* Hex Value Text */
+.value-hex {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
